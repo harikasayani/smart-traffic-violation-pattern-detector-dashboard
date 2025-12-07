@@ -25,7 +25,7 @@ violation_types_list = [
     "Wrong Lane", 
     "Red Light Violation", "Red Light Violation", 
     "No Parking", "No Parking", 
-    "Mobile Phone Usage", "Mobile Phone Usage","Mobile Phone Usage",
+    "Mobile Phone Usage", "Mobile Phone Usage",
     "Overloading", 
     "Illegal U Turn", 
     "Driving Without License", "Driving Without License","Driving Without License",
@@ -33,16 +33,16 @@ violation_types_list = [
 ]
 
 vehicle_types_mapping = {
-    "Overspeeding": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Scooty"]),
-    "Drunk Driving": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw","Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"]),
-    "Wrong Lane": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"]),
-    "Red Light Violation": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"]),
-    "No Parking": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"]),
-    "Hit and Run": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"]),
-    "Mobile Phone Usage": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"]),
-    "Illegal U Turn": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"]),
-    "Driving Without License": random.choice(["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"]),
-    "Overloading": random.choice(["Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Tractor", "E-Rickshaw"])
+    "Overspeeding": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Scooty"],
+    "Drunk Driving": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw","Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"],
+    "Wrong Lane": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"],
+    "Red Light Violation": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"],
+    "No Parking": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"],
+    "Hit and Run": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"],
+    "Mobile Phone Usage": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"],
+    "Illegal U Turn": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"],
+    "Driving Without License": ["Car", "Motorcycle", "Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Electric Scooter", "Tractor", "E-Rickshaw", "Scooty"],
+    "Overloading": ["Truck", "Bus", "Auto-Rickshaw", "Van", "Pickup", "Tractor", "E-Rickshaw"]
 }
 
 # -------------------- VEHICLE SAFETY MAPPING -----------------------
@@ -81,7 +81,7 @@ helmet_worn_mapping = {
 vehicle_types_list = [
     "Car", "Car", "Car", "Car", "Car", 
     "Motorcycle", "Motorcycle", "Motorcycle", "Motorcycle", 
-    "Scooty", "Scooty", "Scooty"
+    "Scooty", "Scooty", "Scooty",
     "Truck", "Truck", "Truck", "Truck", "Truck", "Truck",
     "Bus", 
     "Auto-Rickshaw", 
@@ -262,8 +262,49 @@ court_mapping = {
 }
 
 comments_list = [
-    "First Violation", "First Violation", "First Violation", "First Violation", "First Violation", 
-    "Warning Issued", "Warning Issued", "Warning Issued", "Warning Issued", 
-    "Repeat Offender", "Repeat Offender",
+    "First Violation", "First Violation", "First Violation", "First Violation",
+    "Repeat Offender", "Repeat Offender", "Repeat Offender",
+    "Warning Issued", "Warning Issued",
     "Fine Paid On Spot", 
 ]
+
+# -------------------- INDIAN STATES COORDINATES --------------------
+indian_states_coordinates = {
+    'Andaman & Nicobar': {'latitude': 11.7401, 'longitude': 92.6586},
+    'Andhra Pradesh': {'latitude': 15.9129, 'longitude': 79.7400},
+    'Arunachal Pradesh': {'latitude': 28.2180, 'longitude': 94.7278},
+    'Assam': {'latitude': 26.2006, 'longitude': 92.9376},
+    'Bihar': {'latitude': 25.0961, 'longitude': 85.3131},
+    'Chandigarh': {'latitude': 30.7333, 'longitude': 76.7794},
+    'Chhattisgarh': {'latitude': 21.2787, 'longitude': 81.8661},
+    'Dadra & Nagar Haveli': {'latitude': 20.1809, 'longitude': 73.0169},
+    'Daman & Diu': {'latitude': 20.4283, 'longitude': 72.8397},
+    'Delhi': {'latitude': 28.7041, 'longitude': 77.1025},
+    'Goa': {'latitude': 15.2993, 'longitude': 74.1240},
+    'Gujarat': {'latitude': 22.2587, 'longitude': 71.1924},
+    'Haryana': {'latitude': 29.0588, 'longitude': 76.0856},
+    'Himachal Pradesh': {'latitude': 31.1048, 'longitude': 77.1734},
+    'Jammu & Kashmir': {'latitude': 33.7782, 'longitude': 76.5762},
+    'Jharkhand': {'latitude': 23.6102, 'longitude': 85.2799},
+    'Karnataka': {'latitude': 15.3173, 'longitude': 75.7139},
+    'Kerala': {'latitude': 10.8505, 'longitude': 76.2711},
+    'Ladakh': {'latitude': 34.1526, 'longitude': 77.5770},
+    'Lakshadweep': {'latitude': 10.5667, 'longitude': 72.6417},
+    'Madhya Pradesh': {'latitude': 22.9734, 'longitude': 78.6569},
+    'Maharashtra': {'latitude': 19.7515, 'longitude': 75.7139},
+    'Manipur': {'latitude': 24.6637, 'longitude': 93.9063},
+    'Meghalaya': {'latitude': 25.4670, 'longitude': 91.3662},
+    'Mizoram': {'latitude': 23.1645, 'longitude': 92.9376},
+    'Nagaland': {'latitude': 26.1584, 'longitude': 94.5624},
+    'Odisha': {'latitude': 20.9517, 'longitude': 85.0985},
+    'Puducherry': {'latitude': 11.9416, 'longitude': 79.8083},
+    'Punjab': {'latitude': 31.1471, 'longitude': 75.3412},
+    'Rajasthan': {'latitude': 27.0238, 'longitude': 74.2179},
+    'Sikkim': {'latitude': 27.5330, 'longitude': 88.5122},
+    'Tamil Nadu': {'latitude': 11.1271, 'longitude': 78.6569},
+    'Telangana': {'latitude': 18.1124, 'longitude': 79.0193},
+    'Tripura': {'latitude': 23.9408, 'longitude': 91.9882},
+    'Uttar Pradesh': {'latitude': 26.8467, 'longitude': 80.9462},
+    'Uttarakhand': {'latitude': 30.0668, 'longitude': 79.0193},
+    'West Bengal': {'latitude': 22.9868, 'longitude': 87.8550}
+}

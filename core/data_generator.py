@@ -3,9 +3,31 @@ from datetime import datetime, timedelta
 from faker import Faker
 
 
-from core.data_variables import vehicle_colors_list, driver_genders_list, states_list, violation_types_list, weather_conditions_list, road_conditions_list, license_types_list, issuing_agencies_list, license_validity_list, breathalyzer_results_list, comments_list
+from core.data_variables import (
+    vehicle_colors_list,
+    driver_genders_list,
+    states_list,
+    violation_types_list,
+    weather_conditions_list,
+    road_conditions_list,
+    license_types_list,
+    issuing_agencies_list,
+    license_validity_list,
+    breathalyzer_results_list,
+    comments_list
+)
 
-from core.data_variables import vehicle_types_mapping, helmet_worn_mapping, seatbelt_worn_mapping, no_of_passengers_mapping, fine_mapping, alcohol_levels_mapping,towing_mapping, court_mapping, payment_methods_mapping
+from core.data_variables import (
+    vehicle_types_mapping,
+    helmet_worn_mapping,
+    seatbelt_worn_mapping,
+    no_of_passengers_mapping,
+    fine_mapping,
+    alcohol_levels_mapping,
+    towing_mapping,
+    court_mapping,
+    payment_methods_mapping
+)
 
 
 # ---------------------------------------
@@ -22,7 +44,7 @@ def generate_record(idx, date: datetime.date):
     date = date.strftime("%Y-%m-%d")
     time = fake.time()
 
-    vehicle_type = vehicle_types_mapping.get(violation_type, 'NA')
+    vehicle_type = random.choice(vehicle_types_mapping.get(violation_type, []))
     vehicle_color = random.choice(vehicle_colors_list)
 
     vehicle_model_year = random.randint(1990, int(datetime.strptime(date, "%Y-%m-%d").date().year))

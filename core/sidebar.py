@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
-from datetime import datetime
+from streamlit_local_storage import LocalStorage
 
 def render_sidebar() -> pd.DataFrame:
     """
@@ -13,9 +13,9 @@ def render_sidebar() -> pd.DataFrame:
     # Get the list of available datasets
     dataset_folder = "dataset"
     uploaded_dataset_folder = "uploaded_datasets"
-    related_uploads_folder = "related_uploads"
+    related_uploads_folder = "uploded_file_relateds"
     generated_dataset_folder = "generated_fake_traffic_datasets"
-    other_party_uploads_folder = "other_party_uploads"
+    other_party_uploads_folder = "uploded_file_others"
     
     dataset_options = {}
 
@@ -56,25 +56,53 @@ def render_sidebar() -> pd.DataFrame:
                     parent_dir = os.path.basename(root)
                     dataset_options[f"[Legacy] {parent_dir}/{filename}"] = os.path.join(root, filename)
 
-    # Display the selectbox in the sidebar
-    selected_dataset_display_name = st.sidebar.selectbox(
-        "Choose a dataset", list(dataset_options.keys())
-    )
+    # ==========================================================================================================    
+    # Persistence with Local Storage
+    # ==========================================================================================================    
+
+    localS = LocalStorage()
     
+    # distinct key for local storage item
+    ls_key = "selected_dataset_name" 
+    
+    # Get stored value (might be None/null if not set)
+    stored_value = localS.getItem(ls_key)
+    
+    options_list = list(dataset_options.keys())
+    default_index = 0
+    
+    # Try to match stored value to current options
+    if stored_value and stored_value in options_list:
+        default_index = options_list.index(stored_value)
+
+    # 1. Create Selectbox
+    selected_dataset_display_name = st.sidebar.selectbox(
+        "Choose a dataset", 
+        options_list,
+        index=default_index,
+        width="stretch"
+    )
+
+    # 2. Update Local Storage if changed
+    if selected_dataset_display_name and selected_dataset_display_name != stored_value:
+        localS.setItem(ls_key, selected_dataset_display_name)
+
     if not selected_dataset_display_name:
         st.sidebar.warning("Please select a dataset.")
         return None
 
+    # 3. Get Selected Dataset Path  
     selected_dataset_path = dataset_options[selected_dataset_display_name]
 
-    # Load the selected dataset
+    # 4. Load the selected dataset
     @st.cache_data
     def load_data(path):
         df = pd.read_csv(path)
         return df.copy() # Return a copy to prevent mutation of cached data
-
     df = load_data(selected_dataset_path)
     
+    # 4. Display Success Message
     st.sidebar.success(f"Loaded dataset: **{selected_dataset_display_name}**")
     
+    # 5. Return the loaded dataset
     return df.copy()

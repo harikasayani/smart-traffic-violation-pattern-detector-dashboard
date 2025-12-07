@@ -9,7 +9,11 @@ from core.data_generator import generate_dataset_by_days
 # ------------------------------
 # PAGE CONFIG
 # ------------------------------
-st.set_page_config(page_title="Datasets", page_icon="📁")
+st.set_page_config(
+    page_title="Datasets Management - Smart Traffic Violation Pattern Detector Dashboard", 
+    page_icon="📁", 
+    layout="wide"
+)
 
 # ------------------------------
 # SESSION STATE
@@ -21,6 +25,7 @@ if 'file_to_delete' not in st.session_state:
 # PAGE
 # ------------------------------
 st.title("📁 Datasets Management")
+st.markdown("Manage and upload traffic violation datasets for analysis.")
 
 # --- Fake Data Generator ---
 with st.expander("🤖 Generate Fake Traffic Dataset"):
@@ -129,9 +134,9 @@ if uploaded_file is not None:
                     uploaded_columns = set(uploaded_df.columns)
                     
                     if set(TRAFFIC_VIOLATION_COLUMNS).issubset(uploaded_columns):
-                        save_dir = "related_uploads"
+                        save_dir = "uploded_file_relateds"
                     else:
-                        save_dir = "other_party_uploads"
+                        save_dir = "uploded_file_others"
 
                     os.makedirs(save_dir, exist_ok=True)
                     
@@ -140,7 +145,7 @@ if uploaded_file is not None:
                     with open(file_path, "wb") as f:
                         f.write(uploaded_file.getbuffer())
                     st.success(f"File '{uploaded_file.name}' saved successfully in `{save_dir}`.")
-                    st.rerun()
+                
                 except Exception as e:
                     st.error(f"An error occurred while saving the file: {e}")
     except Exception as e:
@@ -174,13 +179,13 @@ def scan_and_add_datasets(directory, prefix):
                     dataset_options[f"[{prefix}] / {file_name}"] = os.path.join(directory, file_name)
 
 # Scan new directories
-scan_and_add_datasets("related_uploads", "Traffic Related")
+scan_and_add_datasets("uploded_file_relateds", "Traffic Related")
 scan_and_add_datasets("generated_fake_traffic_datasets", "Generated")
-scan_and_add_datasets("other_party_uploads", "Other CSVs")
+scan_and_add_datasets("uploded_file_others", "Other CSVs")
 
 
 
-if not os.path.exists(root_upload_dir) and not dataset_options and not os.path.exists("related_uploads") and not os.path.exists("other_party_uploads"):
+if not os.path.exists(root_upload_dir) and not dataset_options and not os.path.exists("uploded_file_relateds") and not os.path.exists("uploded_file_others"):
     st.info("No datasets have been uploaded or found locally.")
 else:
     if os.path.exists(root_upload_dir):

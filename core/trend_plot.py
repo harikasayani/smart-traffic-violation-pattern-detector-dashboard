@@ -1,9 +1,8 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
-import pandas as pd
 
 # This module handles plots for Trend Analysis
-
+# ==================================================================================
 def plot_trend_analysis_line(attribute_based_pivot, x_axis_label, line_category_label):
     """
     Generates a trend line plot.
@@ -35,7 +34,7 @@ def plot_trend_analysis_line(attribute_based_pivot, x_axis_label, line_category_
     
     fig.tight_layout()
     return fig
-
+# -------------------------------------------------------------------------------
 def plot_categorical_heatmap(percent_pivot, annot, x_label, y_label):
     """
     Generates a categorical heatmap.
@@ -66,3 +65,4 @@ def plot_categorical_heatmap(percent_pivot, annot, x_label, y_label):
     plt.xticks(rotation=45)
     fig.tight_layout()
     return fig
+# ==================================================================================

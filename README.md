@@ -4,6 +4,8 @@
 
 This project is a Streamlit web application designed to analyze traffic violation data. It provides a user-friendly interface to explore, visualize, and gain insights from traffic violation datasets. Users can upload their own data, perform analysis, and view summaries and trends.
 
+> 📘 **Documentation**: For a detailed architectural overview, component breakdown, and data flow diagrams, please refer to the [Project Blueprint](Project_Blueprint.md).
+
 ## ✨ Features
 
 * **Dataset Management:**
@@ -26,15 +28,15 @@ This project is a Streamlit web application designed to analyze traffic violatio
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/saidulalimallick04/smart-traffic-violation-pattern-detector-dashboard.git
-    cd smart-traffic-violation-pattern-detector-dashboard
+    git clone <repository_url>
+    cd <repository_name>
     ```
 
 2. **Choose your package manager:**
 
     ---
 
-   ### Alternative 1: Using `uv` (Recommended)
+   ### 🌟 Primary Method: Using `uv` (Recommended)
 
     1. **Create and activate a virtual environment:**
 
@@ -63,7 +65,7 @@ This project is a Streamlit web application designed to analyze traffic violatio
 
     ---
 
-   ### Alternative 2: Using `pip`
+   ### 🐢 Alternative Method: Using `pip`
 
     1. **Create and activate a virtual environment:**
 
@@ -114,8 +116,8 @@ This project is a Streamlit web application designed to analyze traffic violatio
 ├── map_data
 │   ├── 01_INDIA_STATES.geojson
 │   └── 02_INDIA_STATES.geojson
-├── other_party_uploads
-│   └── AnimalDataLabel.csv
+├── uploded_file_others
+│   └── (empty)
 ├── pages
 │   ├── 01_Numerical_Analysis.py
 │   ├── 02_Visualize_Data.py
@@ -125,7 +127,7 @@ This project is a Streamlit web application designed to analyze traffic violatio
 │   └── 10_View_Dataset.py
 ├── pyproject.toml
 ├── README.md
-├── related_uploads
+├── uploded_file_relateds
 └── uv.lock
 ```
 
@@ -160,3 +162,5 @@ The main dependencies for this project are listed in the `pyproject.toml` file. 
     * Updated file upload logic to automatically classify and store datasets based on their columns.
 * **2025-11-21:** Added "Average Speed Exceeded vs Weather Condition" and "Average Fine Amount by Violation Type" visualizations to the Data Visualization page.
 * **2025-11-20:** Fixed a bug in the Numerical Analysis page that caused a `pyarrow.lib.ArrowInvalid` error when displaying dataset statistics for columns containing dates.
+
+---
