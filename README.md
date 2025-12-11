@@ -6,12 +6,12 @@ This project is a Streamlit web application designed to analyze traffic violatio
 
 > 📘 **Documentation**: For a comprehensive understanding of the project, please refer to our detailed core documentation:
 >
-> * **[1. System Architecture (Basic)](PROJECT_BLUEPRINT_1-BASIC.md)**: High-level overview, architecture diagrams, and directory structure.
-> * **[2. Page Development Details](PROJECT_BLUEPRINT_2-PAGE_DEVELOPMENT_DETAILS.md)**: In-depth analysis of each page, purpose, and dependencies.
-> * **[3. Visual Diagrams](PROJECT_BLUEPRINT_3-VISUAL_DIAGRAMS.md)**: Detailed Architecture, Data Flow, and Component Interaction diagrams.
-> * **[4. Agile Documentation](PROJECT_BLUEPRINT_4-AGILE_DOCUMENTATION.md)**: Product Backlogs, Team Roles, Sprints, and Defect Trackers.
-> * **[4A. Code Quality Report](PROJECT_BLUEPRINT_4-CODE_QUALITY.md)**: Detailed component-level analysis of code architecture and metrics.
-> * **[5. Workflow Timeline](PROJECT_BLUEPRINT_5-WORKFLOW_TIMELINE.md)**: Chronological project history and updates.
+> * **[1. System Architecture (Basic)](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_1-BASIC.md)**: High-level overview, architecture diagrams, and directory structure.
+> * **[2. Page Development Details](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_2-PAGE_DEVELOPMENT_DETAILS.md)**: In-depth analysis of each page, purpose, and dependencies.
+> * **[3. Visual Diagrams](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_3-VISUAL_DIAGRAMS.md)**: Detailed Architecture, Data Flow, and Component Interaction diagrams.
+> * **[4. Agile Documentation](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_4-AGILE_DOCUMENTATION.md)**: Product Backlogs, Team Roles, Sprints, and Defect Trackers.
+> * **[4A. Code Quality Report](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_4-CODE_QUALITY.md)**: Detailed component-level analysis of code architecture and metrics.
+> * **[5. Workflow Timeline](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_5-WORKFLOW_TIMELINE.md)**: Chronological project history and updates.
 
 ## 🎯 Features
 
@@ -126,12 +126,13 @@ This project is a Streamlit web application designed to analyze traffic violatio
 │   └── 10_View_Dataset.py
 ├── pyproject.toml
 ├── requirements.txt                              # Project Dependencies
-├── PROJECT_BLUEPRINT_1-BASIC.md                  # System Architecture & Overview
-├── PROJECT_BLUEPRINT_2-PAGE_DEVELOPMENT_DETAILS.md # Detailed Page Analysis
-├── PROJECT_BLUEPRINT_3-VISUAL_DIAGRAMS.md        # Architecture & Data Flow Diagrams
-├── PROJECT_BLUEPRINT_4-AGILE_DOCUMENTATION.md    # Agile Artifacts & Team Data
-├── PROJECT_BLUEPRINT_4-CODE_QUALITY.md           # Code Quality & Architecture Analysis
-├── PROJECT_BLUEPRINT_5-WORKFLOW_TIMELINE.md      # Chronological Project History
+├── PROJECT_DOCUMENTATIONS
+│   ├── PROJECT_BLUEPRINT_1-BASIC.md                  # System Architecture & Overview
+│   ├── PROJECT_BLUEPRINT_2-PAGE_DEVELOPMENT_DETAILS.md # Detailed Page Analysis
+│   ├── PROJECT_BLUEPRINT_3-VISUAL_DIAGRAMS.md        # Architecture & Data Flow Diagrams
+│   ├── PROJECT_BLUEPRINT_4-AGILE_DOCUMENTATION.md    # Agile Artifacts & Team Data
+│   ├── PROJECT_BLUEPRINT_4-CODE_QUALITY.md           # Code Quality & Architecture Analysis
+│   └── PROJECT_BLUEPRINT_5-WORKFLOW_TIMELINE.md      # Chronological Project History
 ├── README.md
 ├── uploded_file_relateds
 └── uv.lock
