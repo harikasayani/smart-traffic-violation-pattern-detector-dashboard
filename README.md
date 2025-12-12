@@ -9,9 +9,6 @@ This project is a Streamlit web application designed to analyze traffic violatio
 > * **[1. System Architecture (Basic)](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_1-BASIC.md)**: High-level overview, architecture diagrams, and directory structure.
 > * **[2. Page Development Details](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_2-PAGE_DEVELOPMENT_DETAILS.md)**: In-depth analysis of each page, purpose, and dependencies.
 > * **[3. Visual Diagrams](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_3-VISUAL_DIAGRAMS.md)**: Detailed Architecture, Data Flow, and Component Interaction diagrams.
-> * **[4. Agile Documentation](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_4-AGILE_DOCUMENTATION.md)**: Product Backlogs, Team Roles, Sprints, and Defect Trackers.
-> * **[4A. Code Quality Report](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_4-CODE_QUALITY.md)**: Detailed component-level analysis of code architecture and metrics.
-> * **[5. Workflow Timeline](PROJECT_DOCUMENTATIONS/PROJECT_BLUEPRINT_5-WORKFLOW_TIMELINE.md)**: Chronological project history and updates.
 
 ## 🎯 Features
 
@@ -35,8 +32,8 @@ This project is a Streamlit web application designed to analyze traffic violatio
 1. **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
-    cd <repository_name>
+    git clone https://github.com/saidulalimallick04/smart-traffic-violation-pattern-detector-dashboard.git
+    cd smart-traffic-violation-pattern-detector-dashboard
     ```
 
 2. **Choose your package manager:**
@@ -130,9 +127,6 @@ This project is a Streamlit web application designed to analyze traffic violatio
 │   ├── PROJECT_BLUEPRINT_1-BASIC.md                  # System Architecture & Overview
 │   ├── PROJECT_BLUEPRINT_2-PAGE_DEVELOPMENT_DETAILS.md # Detailed Page Analysis
 │   ├── PROJECT_BLUEPRINT_3-VISUAL_DIAGRAMS.md        # Architecture & Data Flow Diagrams
-│   ├── PROJECT_BLUEPRINT_4-AGILE_DOCUMENTATION.md    # Agile Artifacts & Team Data
-│   ├── PROJECT_BLUEPRINT_4-CODE_QUALITY.md           # Code Quality & Architecture Analysis
-│   └── PROJECT_BLUEPRINT_5-WORKFLOW_TIMELINE.md      # Chronological Project History
 ├── README.md
 ├── uploded_file_relateds
 └── uv.lock
@@ -219,9 +213,9 @@ The dedicated team behind the **Smart Traffic Violation Pattern Detector Dashboa
 
 | Team Member | Role / Key Contribution |
 | :--- | :--- |
-| **Saidul Ali Mallick (Sami)** | **Team Lead & Lead Developer**. Initialized Main Repo, handled Architecture, Documentation, and **Map Visualization**. |
+| **Saidul Ali Mallick** | **Team Lead & Lead Developer**. Initialized Main Repo, handled Architecture, Documentation, and **Map Visualization**. |
 | **Anshu Gupta** | **Developer & Git Specialist**. Managed Shared Repository, defined Branching Strategy, handled Merges, and **assisted with Frontend integration**. |
-| **Mrunalini M** | **Developer, UI/UX & Branding**. Created "CollisionX India" platform identity, Logo, and **Key Frontend Developer** for core UI pages. |
+| **Mrunalini P** | **Developer, UI/UX & Branding**. Created "CollisionX India" platform identity, Logo, and **Key Frontend Developer** for core UI pages. |
 | **Ishwari Deshmukh** | **Frontend Developer & Analyst**. Built visualization pages and handled Streamlit layout components. |
 | **Harika Sayani** | **Developer**. Contributed to page structure, HTML representation, and About page. |
 | **Divija V** | **Developer, Analyst & UI/UX**. Implemented Data Upload, Graphical Representations, Visualization Page UI, and file handling logic. |
